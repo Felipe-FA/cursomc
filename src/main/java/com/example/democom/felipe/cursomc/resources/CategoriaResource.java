@@ -22,19 +22,9 @@ public class CategoriaResource {
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET) //salvar é POST, deletar DELET, etc...
 	public ResponseEntity<?> find(@PathVariable Integer id) {
+		
 		Categoria obj = service.buscar(id);
 		return ResponseEntity.ok().body(obj);
-		
-//				LISTA DEIXOU DE EXISTIR, AGORA É O find() .. Esse metodo abaixo foi mostrado pelo professor
-//		Categoria cat1 = new Categoria(1, "informatica");
-//		Categoria cat2 = new Categoria(2, "escritório");
-//		
-//		List<Categoria> lista = new ArrayList<>();
-//		
-//		lista.add(cat1);
-//		lista.add(cat2);
-//		
-//		return lista;
-	}
 	
+	}
 }
