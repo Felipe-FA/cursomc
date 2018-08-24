@@ -21,7 +21,7 @@ public class PedidoResource {
 	private PedidoServices service;
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET) //salvar é POST, deletar DELET, etc...
-	public ResponseEntity<?> find(@PathVariable Integer id) {
+	public ResponseEntity<Pedido> find(@PathVariable Integer id) {
 		
 		Pedido obj = service.buscar(id);
 		return ResponseEntity.ok().body(obj);
